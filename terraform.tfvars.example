@@ -1,0 +1,19 @@
+# Example Terraform Variables
+# Copy this file to terraform.tfvars and update with your values
+
+aws_region           = "us-east-1"
+project_name         = "s3-upload-api"
+environment          = "dev"
+bucket_name          = "my-pdf-uploads-bucket-12345"  # Must be globally unique
+lambda_function_name = "upload-handler"
+api_name             = "upload-api"
+api_stage_name       = "prod"
+enable_cors          = true
+lambda_timeout       = 30
+lambda_memory_size   = 256
+
+tags = {
+  Project     = "S3 Upload API"
+  ManagedBy   = "Terraform"
+  Environment = "dev"
+}
